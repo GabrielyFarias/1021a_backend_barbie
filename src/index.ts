@@ -39,7 +39,7 @@ app.delete('/filmes/:id', (req, res) => {
     if (!filme) return res.status(404).send(filme)
     const filterFilme = filmes_repositorio.filter(filme => filme.id !== id)
     filmes_repositorio = filterFilme
-    res.status(200).send({"mensagem":"tere"})
+    res.status(200).send(filme)
 });
 
 
